@@ -5,6 +5,8 @@ using static UnityEngine.GraphicsBuffer;
 
 public class S_PersonScript : MonoBehaviour
 {
+
+    //This is the npcs obstacle script
     SpriteRenderer spriteRenderer;
     [SerializeField]
     Sprite dead;

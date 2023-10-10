@@ -6,10 +6,12 @@ using UnityEngine.SceneManagement;
 
 public class S_SceneManager : MonoBehaviour
 {
-    public int currentSceneIndex;
+    public static int currentSceneIndex;
     public bool PlayerWins;
     public S_scriptableScenes sceneChooser;
     public static S_SceneManager Instance;
+
+    public SceneToStartWith sceneToLoad;
 
     public void Awake()
     {
@@ -19,11 +21,13 @@ public class S_SceneManager : MonoBehaviour
             return;
         }
         Instance = this;
-
         DontDestroyOnLoad(gameObject);
     }
     private void Start()
     {
+        //Changes scene to the main menu based on enum
+        SceneManager.LoadScene(((int)sceneToLoad));
+
         currentSceneIndex = 0;
         PlayerWins = false;
     }
@@ -34,9 +38,6 @@ public class S_SceneManager : MonoBehaviour
 
     public void Win()
     {
-        print(sceneChooser.sceneList.Count);
-        print(currentSceneIndex);
-
         if (PlayerWins)
         {
             if (currentSceneIndex >= sceneChooser.sceneList.Count)
@@ -55,6 +56,14 @@ public class S_SceneManager : MonoBehaviour
             currentSceneIndex++;
         }
     }
+}
+
+public enum SceneToStartWith
+{
+    MainMenu = 0,
+    Level1 = 1,
+    Level2 = 2,
+    Level3 = 3,
 }
 
 

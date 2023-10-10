@@ -7,8 +7,6 @@ using UnityEngine.InputSystem;
 
 public class S_RaceManager : MonoBehaviour
 {
-    [SerializeField]
-    TextMeshProUGUI[] CanvasWithName;
 
     [Header("Player Handling")]
     [SerializeField]
@@ -34,7 +32,7 @@ public class S_RaceManager : MonoBehaviour
 
     public List<TextMeshProUGUI> lapCounts = new List<TextMeshProUGUI>();
 
-    // Start is called before the first frame update
+    // Player spawning
     void Awake()
     {
         playerInputManager.JoinPlayer(controlScheme: "Keyboard", pairWithDevice: Keyboard.current);

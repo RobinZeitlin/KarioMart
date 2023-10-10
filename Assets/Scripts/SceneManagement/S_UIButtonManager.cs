@@ -40,17 +40,7 @@ public class S_UIButtonManager : MonoBehaviour
         LoadScene(SceneUtility.GetScenePathByBuildIndex(index));
     }
 
-    public void QuitGame()
-    {
-        Application.Quit();
-    }
-
-    public void StartGame()
-    {
-        LoadScene("Level1");
-    }
-
-    public void LoadScene(string sceneToLoad)
+    public static void LoadScene(string sceneToLoad)
     {
         print(sceneToLoad);
         SceneManager.LoadScene(sceneToLoad);

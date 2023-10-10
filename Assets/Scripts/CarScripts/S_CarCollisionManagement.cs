@@ -6,6 +6,8 @@ using UnityEngine;
 
 public class S_CarCollisionManagement : MonoBehaviour
 {
+
+    //Script handles all types of collisions
     Rigidbody2D body;
     S_CarScript s_CarScript;
 
@@ -85,7 +87,7 @@ public class S_CarCollisionManagement : MonoBehaviour
             checkPointCount = 0;
 
 
-            if (lapCount >= 1)
+            if (lapCount >= 3)
             {
                 S_SceneManager.Instance.PlayerWins = true;
                 S_SceneManager.Instance.ChangeSceneIndex();

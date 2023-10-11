@@ -12,10 +12,12 @@ The game is a 2 player local racing game where the players race around avoiding 
 # Process
 I started of by making the player controllers, and input. The cars have two scripts one for input handling and one for collsion. The cars move by using unitys built in physics system and the inputs work by using unity input system (new). I then made bumping and knockback. This is done by adding force to the player based on the rotation of the point of impact. As seen below ⬇️
 
-![image](https://github.com/RobinZeitlin/KarioMart/assets/144109907/76378c51-8133-4f2c-8dd0-3dc2b886d0b4)
+![image](https://github.com/RobinZeitlin/KarioMart/assets/144109907/5cb14a29-104f-4fc2-9415-984e9548ce37)
 
+I made a start system, lap counter and checkpoint system for finnishing. Then it came to powerups. I decided not to overcomplicate it and added a  trigger check on the cars checking for the tag of the object. I then added an initialization system. The scene changes to the startscene and the scenemanager gets loaded, which is the script controlling lap count and loading new scenes when a player wins. The initialization scene is easily chooseable through enum.
 
-I made a start system, lap counter and checkpoint system for finnishing. Then it came to powerups. I decided not to overcomplicate it and added a  trigger check on the cars checking for the tag of the object. I then added an initialization system. The scene changes to the startscene and the scenemanager gets loaded, which is the script controlling lap count and loading new scenes when a player wins.
+![image](https://github.com/RobinZeitlin/KarioMart/assets/144109907/0894cfa8-e7c3-4163-8246-8a60fa15ee6a)
+
 
 # Resources
 
